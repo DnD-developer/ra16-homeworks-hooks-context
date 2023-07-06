@@ -1,0 +1,37 @@
+.item-once-header {
+	width: 100%;
+
+	margin: 0;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	border-top: 1px solid #000000;
+
+	background-color: transparent;
+	color: #000000;
+
+	list-style: none;
+
+	box-sizing: border-box;
+
+	cursor: pointer;
+}
+
+.item-once-header:first-child {
+	border-top: none;
+}
+
+.item-once-header.active {
+	background-color: blue;
+	color: #ffffff;
+}
+
+.item-once-header__header {
+	margin: 0;
+	padding: 0;
+
+	font-family: "sans-serif";
+}
