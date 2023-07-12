@@ -5,18 +5,18 @@ import { useState } from "react"
 export function useRequest(url, firstLoad = true) {
 	const [stateLoading, setStateLoading] = useState()
 	const [data, setData] = useState([])
+	const [error, setError] = useState()
 
 	useEffect(() => {
 		if (firstLoad) {
 			;(async () => {
-				console.log("запрос")
 				setStateLoading(true)
 
 				try {
 					const response = await request(url)
 					setData(response)
 				} catch (error) {
-					console.log(error)
+					setError(error)
 				} finally {
 					setStateLoading(false)
 				}
@@ -24,5 +24,5 @@ export function useRequest(url, firstLoad = true) {
 		}
 	}, [url])
 
-	return { stateLoading, data }
+	return { stateLoading, data, error }
 }

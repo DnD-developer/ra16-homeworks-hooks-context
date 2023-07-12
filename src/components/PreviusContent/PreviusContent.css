@@ -1,0 +1,23 @@
+.previus-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+
+	padding: 15px;
+	margin-left: 10px;
+
+	border: 1px solid #000000;
+}
+
+.previus-content__text {
+	padding: 0;
+	margin: 0;
+
+	font-family: sans-serif;
+}
+
+.previus-content:first-child {
+	margin-left: 0;
+}
